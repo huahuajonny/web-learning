@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day3</title>
+</head>
+<body>
+    <h1>学习内容</h1>
+    <h2>1.标签</h2>
+    <h3>1.表格</h3>
+    <ul>
+        <li>
+            <h2>下面是一个简单的表格</h2>
+            <h3>课程表</h3>
+            <table border="1">
+                <tr>
+                    <th>时间</th>
+                    <th>星期一</th>
+                    <th>星期二</th>
+                    <th>星期三</th>
+                </tr>
+                <tr>
+                    <td>9:00-10:30</td>
+                    <td>数学</td>
+                    <td>英语</td>
+                    <td>编程</td>
+                </tr>
+                <tr>
+                    <td>14:00-15:30</td>
+                    <td>物理</td>
+                    <td>历史</td>
+                    <td>体育</td>
+                </tr>
+            </table>
+            <p>这上面是生成的一段课程表</p>
+            <h3>标签解释</h3>
+            <ul>
+                <li>
+                    <p>"<>"中写"table",表示生成一个表格,关闭用"<>"中写/table,在没有学CSS之前,要写"border=1"属性</p>
+                </li>
+                <li>
+                    <p>"<>"中写"tr"表示生成一行,关闭用在"<>"中写/tr,一般写在table里面"</p>
+                    <p>注意:一行中的内容必须写在tr里面,否则会显示在表格的左上角</p>
+                </li>
+                <li>
+                    <p>"<>"中写"th"表示生成一个表头,关闭用"<>"中写/th,一般写在tr里面</p>
+                    <p>注意:表头中的内容必须写在th里面,否则会显示在表格的左上角</p>
+                </li>
+                <li>
+                    <p>"<>"中写"td"表示生成一个单元格,关闭用"<>"中写/td,一般写在tr里面</p>
+                    <p>注意:单元格中的内容必须写在td里面,否则会显示在表格的左上角</p>
+                </li>
+            </ul>
+
+        </li>
+        <li>
+            <h2>带合并单元格的复杂表格</h2>
+            <h3>个人信息表</h3>
+            <table border="1">
+                <tr>
+                    <th colspan="2">基本信息</th>
+                </tr>
+                <tr>
+                    <td>姓名</td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td>年龄</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <th colspan="2">联系方式</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">手机</td>
+                    <td>138-xxxx-xxxx</td>
+                </tr>
+                <tr>
+                    <td>备用：139-xxxx-xxxx</td>
+                </tr>
+            </table>
+            <p>这上面是生成的一段个人信息表</p>
+            <h3>标签解释</h3>
+            <ul>
+                <li>
+                    <p>"<>"中写"colspan=n"属性表示合并列,n表示合并的列数,关闭用"<>"中写/colspan,一般写在th里面</p>
+                    <p>注意:合并列的列数必须写在colspan属性里面,否则会显示在表格的左上角</p>
+                </li>
+                <li>
+                    <p>"<>"中写"rowspan=n"属性表示合并行,n表示合并的行数,关闭用"<>"中写/rowspan,一般写在td里面</p>
+                    <p>注意:合并行的行数必须写在rowspan属性里面,否则会显示在表格的左上角</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <a href="index.html">返回首页</a>
+</body>
+</html>

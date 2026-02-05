@@ -10,89 +10,122 @@
     <h3>1.表格</h3>
     <ul>
         <li>
-            <h2>下面是一个简单的表格</h2>
-            <h3>课程表</h3>
+            <h2>1. 表格的核心标签</h2>
             <table border="1">
-                <tr>
-                    <th>时间</th>
-                    <th>星期一</th>
-                    <th>星期二</th>
-                    <th>星期三</th>
-                </tr>
-                <tr>
-                    <td>9:00-10:30</td>
-                    <td>数学</td>
-                    <td>英语</td>
-                    <td>编程</td>
-                </tr>
-                <tr>
-                    <td>14:00-15:30</td>
-                    <td>物理</td>
-                    <td>历史</td>
-                    <td>体育</td>
-                </tr>
-            </table>
-            <p>这上面是生成的一段课程表</p>
-            <h3>标签解释</h3>
-            <ul>
-                <li>
-                    <p>"<>"中写"table",表示生成一个表格,关闭用"<>"中写/table,在没有学CSS之前,要写"border=1"属性</p>
-                </li>
-                <li>
-                    <p>"<>"中写"tr"表示生成一行,关闭用在"<>"中写/tr,一般写在table里面"</p>
-                    <p>注意:一行中的内容必须写在tr里面,否则会显示在表格的左上角</p>
-                </li>
-                <li>
-                    <p>"<>"中写"th"表示生成一个表头,关闭用"<>"中写/th,一般写在tr里面</p>
-                    <p>注意:表头中的内容必须写在th里面,否则会显示在表格的左上角</p>
-                </li>
-                <li>
-                    <p>"<>"中写"td"表示生成一个单元格,关闭用"<>"中写/td,一般写在tr里面</p>
-                    <p>注意:单元格中的内容必须写在td里面,否则会显示在表格的左上角</p>
-                </li>
-            </ul>
+                <!-- 表格标题 -->
+                <caption>学生成绩表</caption>
 
+                <!-- 表头区域 -->
+                <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>数学</th>
+                        <th>英语</th>
+                    </tr>
+                </thead>
+
+                <!-- 表格主体 -->
+                <tbody>
+                    <tr>
+                        <td>2023001</td>
+                        <td>张三</td>
+                        <td>90</td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>2023002</td>
+                        <td>李四</td>
+                        <td>88</td>
+                        <td>92</td>
+                    </tr>
+                </tbody>
+
+                <!-- 表格脚注 -->
+                <tfoot>
+                    <tr>
+                        <td colspan="2">平均分</td>
+                        <td>89</td>
+                        <td>88.5</td>
+                    </tr>
+                </tfoot>
+            </table>
         </li>
         <li>
-            <h2>带合并单元格的复杂表格</h2>
-            <h3>个人信息表</h3>
-            <table border="1">
-                <tr>
-                    <th colspan="2">基本信息</th>
-                </tr>
-                <tr>
-                    <td>姓名</td>
-                    <td>张三</td>
-                </tr>
-                <tr>
-                    <td>年龄</td>
-                    <td>22</td>
-                </tr>
-                <tr>
-                    <th colspan="2">联系方式</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">手机</td>
-                    <td>138-xxxx-xxxx</td>
-                </tr>
-                <tr>
-                    <td>备用：139-xxxx-xxxx</td>
-                </tr>
-            </table>
-            <p>这上面是生成的一段个人信息表</p>
-            <h3>标签解释</h3>
+            border="1"- 边框宽度（像素），0表示无边框
+        </li>
+        <li>
+            width="600"或 width="100%"- 表格宽度
+        </li>
+        <li>
+            cellspacing="5"- 单元格之间的间距
+        </li>
+        <li>
+            cellpadding="10"- 单元格内边距（内容到边框的距离）
+        </li>
+        <li>
+            一对"<>"中写cation，表示表格标题, caption标签只能有一个,他有一个属性"align"，表示标题的位置，可选值有"top"、"bottom"、"left"、"right"，默认值是"top"，表示标题在表格上方。表现形式为：一对"<>"中写caption aline="...",关闭时写一对"<>"中写/ caption,两个括号之间写标题的内容
+        </li>
+        <li>
+            thead：表头，通常包含列标题
+        </li>
+        <li>
+            tbody：表格主体，包含主要数据
+        </li>
+        <li>
+            tfoot：表格脚注，如总计、平均分
+        </li>
+        <li>
+            <h3>以上三个标签必须按顺序来</h3>
+        </li>
+        <li>
+            tr:定义表格中的一行
             <ul>
+                <li><h4>属性</h4></li>
                 <li>
-                    <p>"<>"中写"colspan=n"属性表示合并列,n表示合并的列数,关闭用"<>"中写/colspan,一般写在th里面</p>
-                    <p>注意:合并列的列数必须写在colspan属性里面,否则会显示在表格的左上角</p>
+                    align="left|center|right"- 行内内容的水平对齐
                 </li>
                 <li>
-                    <p>"<>"中写"rowspan=n"属性表示合并行,n表示合并的行数,关闭用"<>"中写/rowspan,一般写在td里面</p>
-                    <p>注意:合并行的行数必须写在rowspan属性里面,否则会显示在表格的左上角</p>
+                    valign="top|middle|bottom"- 行内内容的垂直对齐
+                </li>
+                <li>
+                    bgcolor="#颜色值"- 行背景色
+                </li>
+                <li>
+                    height="50"- 行高度
+                </li>
+            </ul>
+        </li>
+        <li>
+            th:定义表头单元格，默认加粗居中
+            <ul>
+                <li><h4>属性（除td以外的特殊属性）</h4></li>
+                <li>
+                    scope="row|col|rowgroup|colgroup"- 指定单元格关联的范围
+                </li>
+                <li>
+                    abbr="简称"- 单元格内容的缩写
+                </li>
+            </ul>
+        </li>
+        <li>
+            td:定义标准的数据单元格
+            <ul>
+                <li><h4>属性</h4></li>
+                <li>
+                    colspan="数字"- 横向合并单元格; rowspan="数字"- 纵向合并单元
+                </li>
+                <li>
+                    width="100"- 单元格宽度 ;height="50"- 单元格高度
+                </li>
+                <li>
+                    nowrap- 禁止换行（属性无值）
+                </li>
+                <li>
+                    headers="id1 id2"- 关联的表头id
                 </li>
             </ul>
         </li>
     </ul>
-    <a href="index.html">返回首页</a>
 </body>
 </html>
